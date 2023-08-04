@@ -1,19 +1,10 @@
-import './App.css'
+import React from 'react'
 
 function App() {
-
-
   return (
-    <>
-      <div>
-          Stranger Things Project - Block 
-
-
-
-
-
-      </div>
-    </>
+   <div>
+      Stranger Things --- Block 30 Project 
+   </div>
   )
 }
 
