@@ -3,7 +3,7 @@
 - Requirements: 
 Make sure you have met all of the following requirements:
 
-Project Management Requirements
+Project Management Requirements:
     GitHub Project:
         - Detailed planning tickets with task descriptions for each one
         - Demonstration that each team member made some contribution on
