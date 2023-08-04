@@ -1,6 +1,6 @@
 # Block 30: Stranger Things
 
-- Requirements
+- Requirements: 
 Make sure you have met all of the following requirements:
 
 Project Management Requirements
