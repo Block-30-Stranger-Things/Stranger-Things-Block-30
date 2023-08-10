@@ -1,7 +1,8 @@
 import React from 'react'
 import  { useState } from 'react'
-import './NewPost.css'
 import { makePost } from './API'
+import { useNavigate } from 'react-router-dom'
+import './NewPost.css'
 
 export default function NewPost() {
 const [newPostData, setNewPostData] = useState( {
@@ -26,6 +27,13 @@ const handelSubmit = async (e) => {
         console.error(error);
     }
 } 
+
+//navigate back to posts
+const navigate = useNavigate();
+
+function backToPosts() {
+  navigate('../posts');
+}
 
   return (
     <div className="newPost-container">
@@ -60,7 +68,10 @@ const handelSubmit = async (e) => {
                  onChange={(e) => setNewPostData({...newPostData, location: e.target.value})} />
             </label>
             
-            <button type="submit">Add Post</button>
+           <div className="our-bts">
+             <button type="submit">Add Post</button>
+             <button type="submit" onClick={backToPosts}>Back To Posts</button>
+           </div>
         </form>
     </div>
   )

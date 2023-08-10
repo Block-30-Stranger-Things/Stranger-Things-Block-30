@@ -10,7 +10,7 @@ const BASE_URL = `https://strangers-things.herokuapp.com/api/${COHORT_NAME}`;
 
 
 
-/*posts*/
+/*posts - fetch posts*/
 export const fetchAllPosts = async () => {
     try {
       const response = await fetch(`${BASE_URL}/posts`)
@@ -22,7 +22,6 @@ export const fetchAllPosts = async () => {
       console.error(error);
     }
   }
-
 
 /*new post*/
 export const makePost = async (newPostData, token) => {
