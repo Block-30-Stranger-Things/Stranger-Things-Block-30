@@ -9,12 +9,21 @@ useEffect(() => {
       const postsData = await fetchAllPosts();
       setPosts(postsData);
     }
-    
+
     fetchPosts();
   }, []);
 
     return (
-        <div>
+        <div className="posts-container">
+            <h1>Posts</h1>
+            {posts.map((post) => (
+                <div key={post._id}>
+                    <h2>{posts.title}</h2>
+                    <p>{posts.description}</p>
+                    <p>{posts.createdAt}</p>
+                </div>
+            ))}
+
 
 
 
