@@ -29,7 +29,7 @@ export default function Posts() {
   const navigate = useNavigate();
 
   function navigateToNewPost() {
-    navigate('./newPost')
+    navigate('../newPost')
   }
 
   return (

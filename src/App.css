@@ -37,3 +37,11 @@ li {
   cursor: pointer;
   text-decoration: underline;
 }
+
+/* footer */
+footer {
+  background-color: #cf2e2e;
+  color: white;
+  font-family: monospace;
+  font-size: 14pt;
+}
