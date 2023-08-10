@@ -8,11 +8,15 @@ export default function Home() {
         navigate('/login');
     }
 
+    function navigateToRegister() {
+        navigate('/register');
+    }
+
   return (
     <div>
         <div className="our-bts">
           <button onClick={navigateToLogIn}>Already have an Account</button>
-          <button>Register an Account</button>
+          <button onClick={navigateToRegister}>Register an Account</button>
         </div>
 
         <h1> Strange Things For Sale</h1>
