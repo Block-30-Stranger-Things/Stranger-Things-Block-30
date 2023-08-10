@@ -1,0 +1,49 @@
+/*Home Component*/
+h1 {
+    margin-top: 60px;
+  }
+  
+/* Login Component */
+.login-container {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+   max-width: 550px;
+   background-color: black;
+   margin-top: 180px;
+   border-radius: 12px;
+   padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+label {
+    font-size: 16pt;
+    color: white;
+}
+
+input {
+    font-size: 14pt;
+    margin: 20px;
+    padding: 10px;
+    width: 400px;
+}
+
+.login-btn {
+    padding: 10px;
+    background-color: #cf2e2e;
+    border-radius: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 14pt;
+}
+
+.login-btn:hover {
+    color: black;
+    cursor: pointer;
+}
