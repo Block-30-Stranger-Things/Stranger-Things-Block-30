@@ -20,6 +20,7 @@ export default function Home() {
         </div>
 
         <h1> Strange Things For Sale</h1>
+        <img src="/images/strangeImage.jpg" className="strangeMainImage"/>
 
       
        
