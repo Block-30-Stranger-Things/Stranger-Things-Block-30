@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Posts-Profile.css'
 
 export default function SearchBar({ value, onChange }) {
   const [input, setInput] = useState(value);
@@ -19,6 +20,6 @@ export default function SearchBar({ value, onChange }) {
         onChange={handleInputChange}
       />
     </div>
-  );
+  )
 }
 

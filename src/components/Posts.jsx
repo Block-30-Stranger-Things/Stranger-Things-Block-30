@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchAllPosts } from './API';
 import SearchBar from './SearchBar';
+import './Posts-Profile.css'
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);
@@ -26,7 +27,7 @@ export default function Posts() {
   return (
     <div className="posts-container">
       <h1>Posts</h1>
-      <p>Search for Posts: </p>
+      <p className="search">Search for Posts: </p>
       <SearchBar value={searchQuery} onChange={handleSearchInput}/>
 
       {filteredPosts.map((post) => (
@@ -36,6 +37,7 @@ export default function Posts() {
           <p>Price: {post.price}</p>
           <p>Created At: {post.createdAt}</p>
           <p></p>
+          <hr />
         </div>
       ))}
     </div>
