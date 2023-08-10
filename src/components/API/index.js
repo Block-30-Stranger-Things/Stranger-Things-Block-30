@@ -24,4 +24,31 @@ export const fetchAllPosts = async () => {
   }
 
 
+/*new post*/
+export const makePost = async (newPostData, token) => {
+
+    try {
+      const response = await fetch(`${BASE_URL}/posts`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          post: {
+            title: newPostData.title,
+            description: newPostData.description,
+            price: newPostData.price,
+            willDeliver: newPostData.willDeliver
+          }
+        })
+      });
+      const result = await response.json();
+      console.log(result);
+      return result
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
 

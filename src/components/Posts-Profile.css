@@ -17,6 +17,11 @@
     font-size: 3em;
 }
 
+.title-heading {
+    font-family: monospace;
+    color: black;
+}
+
 p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 14pt;

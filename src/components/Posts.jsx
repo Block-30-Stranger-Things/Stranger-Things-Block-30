@@ -42,7 +42,7 @@ export default function Posts() {
 
       {filteredPosts.map((post) => (
         <div key={post._id}>
-          <h2>Title: {post.title}</h2>
+          <h2 className="title-heading">Title: {post.title}</h2>
           <p>Description: {post.description}</p>
           <p>Price: {post.price}</p>
           <p>Location: {post.location}</p>

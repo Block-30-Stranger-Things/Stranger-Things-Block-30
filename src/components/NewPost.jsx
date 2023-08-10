@@ -1,6 +1,7 @@
 import React from 'react'
 import  { useState } from 'react'
 import './NewPost.css'
+import { makePost } from './API'
 
 export default function NewPost() {
 const [newPostData, setNewPostData] = useState( {
@@ -10,11 +11,27 @@ const [newPostData, setNewPostData] = useState( {
     location: "",
 })
 
+const [token, setToken] = useState(null);
+
+const handelToken = (newToken) => {
+    setToken(newToken);
+}
+
+const handelSubmit = async (e) => {
+    e.preventDefault();
+    try {
+        const response = await makePost(newPostData)
+        console.log(response)
+    } catch (error) {
+        console.error(error);
+    }
+} 
+
   return (
     <div className="newPost-container">
         <h2 className="newPost-heading">Add a New Post</h2>
 
-        <form>
+        <form onSubmit={handelSubmit}>
             <label>
                 Title: 
                 <input
@@ -48,6 +65,4 @@ const [newPostData, setNewPostData] = useState( {
     </div>
   )
 }
-
-
 
