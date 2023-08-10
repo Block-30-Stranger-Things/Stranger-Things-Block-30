@@ -25,20 +25,21 @@ const handelSubmit = (e) => {
         <form onSubmit={handelSubmit}>
           <label className="label-login">
             Username: 
-            <input value={userName} 
-            placeholder="Username"
-            onChange={inputtingUsername}
-            className="input-login"/>
+            <input
+             value={userName} 
+             placeholder="Username"
+             onChange={inputtingUsername}
+             className="input-login"/>
           </label>
 
           <label className="label-login">
            Password: 
             <input 
-            value={password} 
-            type="password"
-            placeholder="Enter Password"
-            onChange={inputtingPassword}
-            className="input-login"/>
+             value={password} 
+             type="password"
+             placeholder="Enter Password"
+             onChange={inputtingPassword}
+             className="input-login"/>
           </label>
 
           <button className="login-btn">
