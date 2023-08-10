@@ -27,14 +27,14 @@ export default function Posts() {
 
   //navigate
   const navigate = useNavigate();
-  
+
   function navigateToNewPost() {
     navigate('./newPost')
   }
 
   return (
     <div className="posts-container">
-      <h1>Posts</h1>
+      <h2 className="post-heading">Posts</h2>
       <p className="search">Search for Posts: </p>
       <SearchBar value={searchQuery} onChange={handleSearchInput}/>
 
@@ -47,9 +47,6 @@ export default function Posts() {
           <p>Price: {post.price}</p>
           <p>Location: {post.location}</p>
           <p>Created At: {post.createdAt}</p>
-
-
-          <p></p>
           <hr />
         </div>
       ))}

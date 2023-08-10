@@ -9,18 +9,16 @@
     border-radius: 25px;
 }
 
-h1, h2, p {
+.post-heading, p {
     color: black;
     padding: 20px;
-}
-
-h2, p {
-    text-align: left;
+    font-size: 3em;
 }
 
 p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 14pt;
+    text-align: left;
 }
 
 /*search and Search Bar Component*/

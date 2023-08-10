@@ -21,7 +21,7 @@ const handelSubmit = (e) => {
   return (
     <>
       <div className="login-container">
-        <h2>Log In</h2>
+        <h2 className="login-heading">Log In</h2>
         <form onSubmit={handelSubmit}>
           <label>
             Username: 
