@@ -33,7 +33,9 @@ export default function Posts() {
         <div key={post._id}>
           <h2>Title: {post.title}</h2>
           <p>Description: {post.description}</p>
+          <p>Price: {post.price}</p>
           <p>Created At: {post.createdAt}</p>
+          <p></p>
         </div>
       ))}
     </div>
