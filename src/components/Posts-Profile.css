@@ -18,12 +18,22 @@ h2, p {
     text-align: left;
 }
 
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+}
+
 /*search and Search Bar Component*/
 .search {
     text-align: center;
+    font-size: 16pt;
 }
 
 .searchBar {
     border-radius: 10px;
+    width: 300px;
 }
 
+.newPost {
+    margin: 20px;
+}
