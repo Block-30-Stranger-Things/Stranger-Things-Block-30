@@ -27,8 +27,28 @@ export const login = async (userName, password) => {
   }
 
 
-
 /*register*/
+export const registerUser = async (registerUserName, registerPassword) => {
+    try {
+      const response = await fetch(`${BASE_URL}/users/register`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          user: {
+            username: registerUserName,
+            password: registerPassword
+          }
+        })
+      });
+      const result = await response.json();t
+      console.log(result)
+      return result
+    } catch (err) {
+      console.error(err);
+    }
+  }
 
 
 
@@ -44,6 +64,7 @@ export const fetchAllPosts = async () => {
       console.error(error);
     }
   }
+
 
 /*new post*/
 export const makePost = async (newPostData, token) => {
@@ -71,5 +92,3 @@ export const makePost = async (newPostData, token) => {
       console.error(err);
     }
   }
-
-
