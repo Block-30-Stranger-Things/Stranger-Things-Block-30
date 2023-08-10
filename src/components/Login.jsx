@@ -23,20 +23,22 @@ const handelSubmit = (e) => {
       <div className="login-container">
         <h2 className="login-heading">Log In</h2>
         <form onSubmit={handelSubmit}>
-          <label>
+          <label className="label-login">
             Username: 
             <input value={userName} 
             placeholder="Username"
-            onChange={inputtingUsername}/>
+            onChange={inputtingUsername}
+            className="input-login"/>
           </label>
 
-          <label>
+          <label className="label-login">
            Password: 
             <input 
             value={password} 
             type="password"
             placeholder="Enter Password"
-            onChange={inputtingPassword}/>
+            onChange={inputtingPassword}
+            className="input-login"/>
           </label>
 
           <button className="login-btn">

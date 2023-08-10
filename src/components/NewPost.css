@@ -10,7 +10,6 @@
     margin-top: 60px;
     padding: 20px;
     text-align: center;
-
 }
 
 .newPost-heading {
@@ -30,10 +29,12 @@ form {
 
 input {
     width: 550px;
-    font-size: 12pt;
-    border-radius: 8px;
+    font-size: 14pt;
+    border-radius: 5px;
     background-color: lightgrey;
     color: black;
+    padding: 20px;
+    margin: 10px;
 }
 
 label {
@@ -43,4 +44,7 @@ label {
     align-items: center;
     display: flex;
     flex-direction: column;
+    font-family: monospace;
+    font-size: 16pt;
 }
+

@@ -32,12 +32,12 @@ h1 {
     padding-bottom: 10px;
 }
 
-label {
+.label-login {
     font-size: 16pt;
     color: white;
 }
 
-input {
+.input-login {
     font-size: 14pt;
     margin: 20px;
     padding: 10px;
