@@ -3,31 +3,28 @@ const COHORT_NAME = "2302-ACC-WEB-PT-B";
 const BASE_URL = `https://strangers-things.herokuapp.com/api/${COHORT_NAME}`;
 
 /*login*/
-export const login = async (userName, password) => {
+export const login = async (username, password) => {
 
-    try {
-      const response = await fetch(`${BASE_URL}/users/login`, {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          user: {
-            username: userName,
-            password: password
-          }
-        })
-      });
-      const result = await response.json();
-      const token = result.data.token
-      return token;
-     
-    } catch (err) {
-      console.error(err);
-    }
+  try {
+    const response = await fetch(`${BASE_URL}/users/login`, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        user: {
+          username: username,
+          password: password
+        }
+      })
+    });
+    const result = await response.json();
+    console.log(result);
+    return result
+  } catch (err) {
+    console.error(err);
   }
-
+}
 
 /*register*/
 export const registerUser = async (registerUsername, registerPassword) => {

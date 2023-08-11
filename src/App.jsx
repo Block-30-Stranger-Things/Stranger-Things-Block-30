@@ -9,7 +9,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import { useState } from 'react'
 
 function App() {
-  const [token, setToken] = useState(null);
+  // const [token, setToken] = useState(null);
 
   return (
   <>
@@ -26,8 +26,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/profile" element={<Profile/>} />
-      <Route path="/login" element={<Login token={token} setToken={setToken}/>} />
-      <Route path="/register" element={<Register token={token} setToken={setToken} />} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/register" element={<Register />} />
 
       <Route path="/posts" element={<Posts />} />
         <Route path="/newPost" element={<NewPost />} />
