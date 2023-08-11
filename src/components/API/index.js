@@ -9,7 +9,8 @@ export const login = async (userName, password) => {
       const response = await fetch(`${BASE_URL}/users/login`, {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({
           user: {
@@ -19,8 +20,9 @@ export const login = async (userName, password) => {
         })
       });
       const result = await response.json();
-      console.log(result);
-      return result
+      const token = result.data.token
+      return token;
+     
     } catch (err) {
       console.error(err);
     }
@@ -28,29 +30,26 @@ export const login = async (userName, password) => {
 
 
 /*register*/
-export const registerUser = async (registerUserName, registerPassword) => {
-    try {
+export const registerUser = async (registerUsername, registerPassword) => {
+  try {
       const response = await fetch(`${BASE_URL}/users/register`, {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          user: {
-            username: registerUserName,
-            password: registerPassword
-          }
-        })
-      });
-      const result = await response.json();t
-      console.log(result)
-      return result
-    } catch (err) {
-      console.error(err);
-    }
+          method: "POST",
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              user: {
+                  username:registerUsername,
+                  password: registerPassword
+              }
+          })
+      })
+      const result = await response.json();
+      return result;
+  } catch (error) {
+      console.error("Error with Registration", error);
   }
-
-
+}
 
 /*posts - fetch posts*/
 export const fetchAllPosts = async () => {

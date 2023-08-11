@@ -1,24 +1,34 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { registerUser } from './API'
 
-export default function Register() {
+export default function Register({token}) {
 const [registerUsername, setRegisteredUsername] = useState("")
-const [registerPassword, setRegisteredPassword] = useState("")
+const [registerPassword, setRegisterPassword] = useState("");
 
 function inputUserName(e) {
   setRegisteredUsername(e.target.value)
 }
 
 function inputPassword(e) {
-  setRegisteredPassword(e.target.value)
+  setRegisterPassword(e.target.value);
 }
 
-function handelSubmit() {
+function handelSubmit(e) {
   e.preventDefault();
 }
 
+useEffect(() => {  
+  const getRegistered = async () => {
+    const result = await registerUser();
+    console.log(result)
+  }
+
+  getRegistered();
+}, []);  //do we need something here? 
+
 
   return (
+  <>
     <div className="register-container">
       <h2 className="register-heading">Register Account</h2>
         <form onSubmit={handelSubmit}>
@@ -33,14 +43,18 @@ function handelSubmit() {
 
           <label className="resister-label">
             Password: 
-            <input type="text" 
+            <input type="password" 
             value={registerPassword} 
             onChange={inputPassword} 
             className="register-input"/>
           </label>
 
-          <button>Register</button>
+          <button onClick={handelSubmit}>Register</button>
         </form>
     </div>
+
+ 
+ </>
+    
   )
 }
