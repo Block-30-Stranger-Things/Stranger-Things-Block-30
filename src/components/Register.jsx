@@ -22,19 +22,21 @@ function handelSubmit() {
     <div className="register-container">
       <h2 className="register-heading">Register Account</h2>
         <form onSubmit={handelSubmit}>
-          <label>
+          <label className="register-label">
             Username: 
             <input 
             type="text" 
             value={registerUsername} 
-            onChange={inputUserName} />
+            onChange={inputUserName}
+            className="register-input" />
           </label>
 
-          <label>
+          <label className="resister-label">
             Password: 
             <input type="text" 
             value={registerPassword} 
-            onChange={inputPassword} />
+            onChange={inputPassword} 
+            className="register-input"/>
           </label>
 
           <button>Register</button>
