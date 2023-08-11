@@ -3,10 +3,9 @@ import { useState } from 'react'
 import { login } from './API'
 import './Home-Login.css'
 
-export default function Login() {
+export default function Login({setToken}) {
 const [userName, setUsername] = useState("");
 const [password, setPassword] = useState("");
-const [token, setToken] = useState("");
 
 const inputtingUsername = (e) => {
     setUsername(e.target.value);
@@ -16,14 +15,10 @@ const inputtingPassword = (e) => {
     setPassword(e.target.value);
 }
 
-const handelSubmit = (e) => {
+const handelSubmit = async (e) => {
     e.preventDefault();
-}
 
-useEffect(() => {
     if (userName && password) {
-      const getLogin = async () => {
-        try {
           const result = await login(userName, password);
   
           if (result.success) {
@@ -34,17 +29,9 @@ useEffect(() => {
 
           } else {
             console.log("Login failed. Incorrect username or password. Please try again");
-            
           }
-        } catch (err) {
-          console.error(err);
-          
-        }
+        } 
       }
-  
-      getLogin();
-    }
-  }, [userName, password]);
 
   return (
     <>
@@ -70,8 +57,7 @@ useEffect(() => {
              className="input-login"/>
           </label>
 
-          <button className="login-btn">
-            Login
+          <button className="login-btn">Login
           </button>
       </form>
       </div>

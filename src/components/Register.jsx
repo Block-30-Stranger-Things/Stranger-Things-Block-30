@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { registerUser } from './API'
 
-export default function Register({token}) {
+export default function Register({setToken}) {
 const [registerUsername, setRegisteredUsername] = useState("")
 const [registerPassword, setRegisterPassword] = useState("");
 
@@ -13,19 +13,13 @@ function inputPassword(e) {
   setRegisterPassword(e.target.value);
 }
 
-function handelSubmit(e) {
+const handelSubmit = async (e) => {
   e.preventDefault();
+
+  const result = await registerUser(registerUsername, registerPassword)
+  setToken(result.data.token)
+  console.log(test)
 }
-
-useEffect(() => {  
-  const getRegistered = async () => {
-    const result = await registerUser();
-    console.log(result)
-  }
-
-  getRegistered();
-}, []);  //do we need something here? 
-
 
   return (
   <>
