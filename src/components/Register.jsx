@@ -19,6 +19,7 @@ const handelSubmit = async (e) => {
   const result = await registerUser(registerUsername, registerPassword)
   // setToken(result.data.token)
   console.log(result)
+  alert("Success, you are now a Registered Member!")
 }
 
   return (
