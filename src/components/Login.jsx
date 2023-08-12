@@ -23,12 +23,14 @@ const handelSubmit = async (e) => {
   
           if (result.success) {
             console.log("Login is successful")
+            alert("You are now logged in")
 
             const token = result.data.token
             setToken(token);
 
           } else {
             console.log("Login failed. Incorrect username or password. Please try again");
+            alert("Login is incorrect, please try again")
           }
         } 
       }
