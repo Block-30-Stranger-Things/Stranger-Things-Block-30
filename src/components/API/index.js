@@ -90,7 +90,7 @@ export const makePost = async (newPostData, token) => {
   }
 
   /*profile*/
-  export const myData = async () => {
+  export const myData = async (token) => {
 
     try {
       const response = await fetch(`${BASE_URL}/users/me`, {
