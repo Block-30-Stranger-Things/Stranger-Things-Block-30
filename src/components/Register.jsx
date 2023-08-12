@@ -36,7 +36,7 @@ const handelSubmit = async (e) => {
             className="register-input" />
           </label>
 
-          <label className="resister-label">
+          <label className="register-label">
             Password: 
             <input type="password" 
             value={registerPassword} 

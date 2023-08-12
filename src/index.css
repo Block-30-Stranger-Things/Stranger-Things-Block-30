@@ -27,7 +27,7 @@
   padding: 30px;
 }
 
-.resister-label {
+.register-label {
   font-size: 16pt;
   color: white;
 }
@@ -37,4 +37,5 @@
   margin: 20px;
   padding: 10px;
   width: 400px;
+  
 }
