@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { login } from './API'
+// import { useNavigate } from 'react-router-dom'
 import './Home-Login.css'
 
 export default function Login({setToken}) {
@@ -23,7 +24,7 @@ const handelSubmit = async (e) => {
   
           if (result.success) {
             console.log("Login is successful")
-            alert("You are now logged in")
+            alert("You are now logged in and you can go to your profile page")
 
             const token = result.data.token
             setToken(token);
@@ -59,8 +60,7 @@ const handelSubmit = async (e) => {
              className="input-login"/>
           </label>
 
-          <button className="login-btn">Login
-          </button>
+          <button className="login-btn">Login</button>
       </form>
       </div>
     </>
