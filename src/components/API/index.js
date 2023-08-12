@@ -88,3 +88,21 @@ export const makePost = async (newPostData, token) => {
       console.error(err);
     }
   }
+
+  /*profile*/
+  export const myData = async () => {
+
+    try {
+      const response = await fetch(`${BASE_URL}/users/me`, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+      });
+      const result = await response.json();
+      console.log(result);
+      return result
+    } catch (err) {
+      console.error(err);
+    }
+  }
