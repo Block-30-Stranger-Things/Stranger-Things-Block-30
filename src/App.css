@@ -3,3 +3,38 @@
   text-align: center;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+/*navigation*/
+.link-container {
+  background-color: #cf2e2e;
+  padding: 18px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  font-size: 18pt;
+  font-family: 'Times New Roman', Times, serif
+}
+
+.navigation a {
+  color: black;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+

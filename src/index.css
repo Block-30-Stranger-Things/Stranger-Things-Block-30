@@ -14,3 +14,28 @@
   -webkit-text-size-adjust: 100%;
 }
 
+/*register component*/
+.register-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 550px;
+  background-color: black;
+  margin-top: 180px;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.register-label {
+  font-size: 16pt;
+  color: white;
+}
+
+.register-input {
+  font-size: 14pt;
+  margin: 20px;
+  padding: 10px;
+  width: 400px;
+  
+}
