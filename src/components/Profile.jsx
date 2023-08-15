@@ -8,7 +8,7 @@ useEffect(() => {
   const fetchProfile = async () => {
     try {
       const profileData = await myData(token)
-      setProfile(profileData.data.user)
+      setProfile(profileData.data)
 
     } catch (error) {
       console.error("Error:", error)
@@ -18,10 +18,11 @@ useEffect(() => {
   fetchProfile()
 }, [token])
 
-
+console.log({profile})
 return (
   <>
     <h2>My Profile</h2>
+    <p>{profile.username}</p>
 
   </>
   
