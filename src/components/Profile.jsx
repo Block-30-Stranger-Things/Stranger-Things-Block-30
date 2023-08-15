@@ -20,11 +20,12 @@ useEffect(() => {
 
 console.log({profile})
 return (
-  <>
-    <h2>My Profile</h2>
-    <p>{profile.username}</p>
+    <div className="profile-container">
+      <h2 className="profile-heading">My Profile</h2>
+      <p>{profile.username}</p>
+    </div>
 
-  </>
+ 
   
  )
 } 
