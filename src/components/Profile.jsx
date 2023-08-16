@@ -27,11 +27,12 @@ useEffect(() => {
       <h2 className="profile-heading">My Profile</h2>
 
      <div className="profile-info">  
-      <p>Welcome, {profile.username}</p>
-       <p>Messages: {profile.messages}</p>
+       <p>Welcome, {profile.username}</p>
+       <p>Messages: TBD Will Work On This {profile.messages}</p>
        <p>ID: {profile._id}</p>  
 
-       <MyPosts posts={posts} />
+      <hr />
+      <MyPosts posts={posts} />
       </div>
    </div>
   </>

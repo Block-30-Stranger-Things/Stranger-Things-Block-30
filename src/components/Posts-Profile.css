@@ -23,7 +23,7 @@
 }
 
 p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: monospace;
     font-size: 14pt;
     text-align: left;
 }
@@ -60,4 +60,15 @@ p {
 .profile-heading {
     color: black;
     font-family: 'Courier New', Courier, monospace;
+}
+
+/*my posts component*/
+.myPosts {
+    color: black;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.delete-btn {
+    margin: 10px;
 }

@@ -77,7 +77,8 @@ export const makePost = async (newPostData, token) => {
             title: newPostData.title,
             description: newPostData.description,
             price: newPostData.price,
-            willDeliver: newPostData.willDeliver
+            willDeliver: newPostData.willDeliver,
+            updatedAt: newPostData.updatedAt
           }
         })
       });
