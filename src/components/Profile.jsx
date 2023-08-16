@@ -28,10 +28,7 @@ console.log({profile})
        <p>Welcome, {profile.username}</p>
        <p>Title: {profile.messages}</p>
        <p>ID: {profile._id}</p>
-      
-  
       </div>
-   
    </div>
   </>
   )
