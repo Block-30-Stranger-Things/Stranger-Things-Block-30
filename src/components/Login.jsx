@@ -27,6 +27,8 @@ const handelSubmit = async (e) => {
             alert("You are now logged in and you can go to your profile page")
 
             const token = result.data.token
+            localStorage.setItem("token", token)
+            console.log(localStorage)
             setToken(token);
 
           } else {

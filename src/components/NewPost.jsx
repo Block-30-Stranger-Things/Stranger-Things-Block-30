@@ -4,24 +4,19 @@ import { makePost } from './API'
 import { useNavigate } from 'react-router-dom'
 import './NewPost.css'
 
-export default function NewPost() {
-const [newPostData, setNewPostData] = useState( {
+export default function NewPost() {  
+  console.log(localStorage)
+  const [newPostData, setNewPostData] = useState( {
     title: "",
     description: "",
     price: "",
     location: "",
 })
 
-const [token, setToken] = useState(null);
-
-const handelToken = (newToken) => {
-    setToken(newToken);
-}
-
 const handelSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await makePost(newPostData)
+        const response = await makePost(newPostData, localStorage.token)
         console.log(response)
     } catch (error) {
         console.error(error);
