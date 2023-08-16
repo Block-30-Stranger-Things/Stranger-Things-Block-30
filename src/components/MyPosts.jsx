@@ -14,7 +14,11 @@ export default function MyPosts({ posts }) {
              <p><em>Description:</em> {post.description}</p>
              <p><em>Price:</em> {post.price}</p>
              <p><em>Location</em> {post.location}</p>
+             <p><em>Updated At:</em>{post.updatedAt}</p>
              <p><em>Cohort:</em>{post.cohort}</p>
+             <p><em>Author:</em>{post.author}</p>
+             <p><em>Image URL:</em>{post.imgUrl}</p>
+
              <button className="delete-btn" type="button">Delete Post</button>
              <button type="button">Select Post</button>
 
