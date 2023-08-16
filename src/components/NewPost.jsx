@@ -68,12 +68,12 @@ function postAdded() {
                  onChange={(e) => setNewPostData({...newPostData, location: e.target.value})} />
             </label>
 
-            <label>
+            {/* <label>  // Unfortunately, I couldn't get this to work on time, but I really want to so I will work on this in the future :)
               Image Url: 
                <input
                  value={newPostData.imgUrl}
                  onChange={(e) => setNewPostData({...newPostData, imgUrl: e.target.value})} />
-            </label>
+            </label> */}
             
            <div className="our-bts">
              <button type="submit" onClick={postAdded}>Add Post</button>
