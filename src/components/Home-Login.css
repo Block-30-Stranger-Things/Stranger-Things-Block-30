@@ -42,6 +42,7 @@ h1 {
     margin: 20px;
     padding: 10px;
     width: 400px;
+    caret-color: #cf2e2e;
 }
 
 .login-btn {
