@@ -26,7 +26,7 @@ export default function MyPosts({ posts }) {
              <p><em>Updated At:</em>{post.updatedAt}</p>
              <p><em>Cohort:</em>{post.cohort}</p>
              <p><em>Author:</em>{post.author}</p>
-             <p><em>Image URL: TBD, will work on this</em>{post.imgUrl}</p>
+             {/* <img src={post.imgUrl} /> */}
 
              <button className="delete-btn" type="button" onClick={deleteMe}>Delete Post</button>
              <button type="button" onClick={selectMe}>Select Post</button>
