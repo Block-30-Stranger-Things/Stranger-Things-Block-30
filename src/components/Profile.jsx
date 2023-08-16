@@ -33,6 +33,11 @@ function logOut() {
   alert("Logging out, see you next time")
 }
 
+//get todays date
+function getDate() {
+  document.getElementById("getTodaysDate").innerHTML = Date();
+}
+
   return (
     <>
      <div className="profile-container">
