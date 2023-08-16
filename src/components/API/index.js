@@ -26,6 +26,7 @@ export const login = async (username, password) => {
   }
 }
 
+
 /*register*/
 export const registerUser = async (registerUsername, registerPassword) => {
   try {
@@ -47,6 +48,7 @@ export const registerUser = async (registerUsername, registerPassword) => {
       console.error("Error with Registration", error);
   }
 }
+
 
 /*posts - fetch posts*/
 export const fetchAllPosts = async () => {
@@ -116,12 +118,6 @@ export const postMessage = async (newPostData, token) => {
   }
 }
 
-
-
-
-
-
-
   /*profile*/
   export const myData = async (token) => {
 
@@ -139,3 +135,5 @@ export const postMessage = async (newPostData, token) => {
       console.error(err);
     }
   }
+
+
