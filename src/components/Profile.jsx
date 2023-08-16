@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { myData } from './API';
 
-export default function Profile( {token }) {  //pass token 
+export default function Profile( {token }) {  
   const [profile, setProfile] = useState({})
 
 useEffect(() => {
@@ -19,13 +19,34 @@ useEffect(() => {
 }, [token])
 
 console.log({profile})
-return (
-    <div className="profile-container">
+  return (
+    <>
+     <div className="profile-container">
       <h2 className="profile-heading">My Profile</h2>
-      <p>{profile.username}</p>
-    </div>
+
+     <div className="profile-info">
+       <p>Welcome, {profile.username}</p>
+       <p>Title: {profile.messages}</p>
+       <p>ID: {profile._id}</p>
+      
+  
+      </div>
+   
+   </div>
+  </>
+  )
+}
+
+
 
  
   
- )
-} 
+
+
+
+
+
+
+
+
+
