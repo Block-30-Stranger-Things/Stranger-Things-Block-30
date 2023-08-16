@@ -37,6 +37,8 @@ function logOut() {
     <>
      <div className="profile-container">
       <h2 className="profile-heading">My Profile</h2>
+      <p id="getTodaysDate"></p>
+      <button onClick={getDate} className="date">Todays Date</button>
 
      <div className="profile-info">  
        <p>Welcome, {profile.username}!</p>
