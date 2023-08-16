@@ -21,15 +21,18 @@ useEffect(() => {
   fetchProfile()
 }, [token])
 
+console.log(profile)
+
   return (
     <>
      <div className="profile-container">
       <h2 className="profile-heading">My Profile</h2>
 
      <div className="profile-info">  
-       <p>Welcome, {profile.username}</p>
+       <p>Welcome, {profile.username}!</p>
        <p>Messages: TBD Will Work On This {profile.messages}</p>
        <p>ID: {profile._id}</p>  
+       <p>Cohort: {profile.cohort}</p>
 
       <hr />
       <MyPosts posts={posts} />

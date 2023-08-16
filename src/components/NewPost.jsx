@@ -30,6 +30,11 @@ function backToPosts() {
   navigate('../posts');
 }
 
+//post added
+function postAdded() {
+  alert("Your post has been added. Please go to posts or profile")
+}
+
   return (
     <div className="newPost-container">
         <h2 className="newPost-heading">Add a New Post</h2>
@@ -62,9 +67,16 @@ function backToPosts() {
                  value={newPostData.location}
                  onChange={(e) => setNewPostData({...newPostData, location: e.target.value})} />
             </label>
+
+            <label>
+              Image Url: 
+               <input
+                 value={newPostData.imgUrl}
+                 onChange={(e) => setNewPostData({...newPostData, imgUrl: e.target.value})} />
+            </label>
             
            <div className="our-bts">
-             <button type="submit">Add Post</button>
+             <button type="submit" onClick={postAdded}>Add Post</button>
              <button type="submit" onClick={backToPosts}>Back To Posts</button>
            </div>
         </form>
