@@ -27,11 +27,13 @@ const handelSubmit = async (e) => {
             alert("You are now logged in and you can go to your profile page")
 
             const token = result.data.token
+            localStorage.setItem("token", token)
+            console.log(localStorage)
             setToken(token);
 
           } else {
-            console.log("Login failed. Incorrect username or password. Please try again");
-            alert("Login is incorrect, please try again")
+            console.log("Login failed. Incorrect username or password. Please try again")
+            alert("Login is incorrect, please try again, or register if you don't have an account")
           }
         } 
       }

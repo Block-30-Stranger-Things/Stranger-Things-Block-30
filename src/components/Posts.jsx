@@ -47,11 +47,13 @@ export default function Posts() {
           <p>Price: {post.price}</p>
           <p>Location: {post.location}</p>
           <p>Created At: {post.createdAt}</p>
+          <p>Updated At: {post.updatedAt}</p>
+          <p>Cohort: {post.cohort}</p>
+
           <hr />
         </div>
       ))}
     </div>
   )
 }
-
 

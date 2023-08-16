@@ -20,8 +20,6 @@ function App() {
         <Link to="/login">Login</Link>
         <Link to="/profile">Profile</Link>
         <Link to="/posts">Posts</Link>
-     
-    
       </div>
     </div>
 
@@ -39,3 +37,6 @@ function App() {
 }
 
 export default App
+
+
+

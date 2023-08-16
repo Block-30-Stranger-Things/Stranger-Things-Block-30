@@ -27,6 +27,10 @@
   padding: 30px;
 }
 
+.register-heading {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .register-label {
   font-size: 16pt;
   color: white;

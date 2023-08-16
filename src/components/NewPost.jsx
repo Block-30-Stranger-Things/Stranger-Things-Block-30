@@ -4,24 +4,19 @@ import { makePost } from './API'
 import { useNavigate } from 'react-router-dom'
 import './NewPost.css'
 
-export default function NewPost() {
-const [newPostData, setNewPostData] = useState( {
+export default function NewPost() {  
+  console.log(localStorage)
+  const [newPostData, setNewPostData] = useState( {
     title: "",
     description: "",
     price: "",
     location: "",
 })
 
-const [token, setToken] = useState(null);
-
-const handelToken = (newToken) => {
-    setToken(newToken);
-}
-
 const handelSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await makePost(newPostData)
+        const response = await makePost(newPostData, localStorage.token)
         console.log(response)
     } catch (error) {
         console.error(error);
@@ -33,6 +28,11 @@ const navigate = useNavigate();
 
 function backToPosts() {
   navigate('../posts');
+}
+
+//post added
+function postAdded() {
+  alert("Your post has been added. Please go to posts or profile")
 }
 
   return (
@@ -67,12 +67,21 @@ function backToPosts() {
                  value={newPostData.location}
                  onChange={(e) => setNewPostData({...newPostData, location: e.target.value})} />
             </label>
+
+            {/* <label>  // Unfortunately, I couldn't get this to work on time, but I really want to so I will work on this in the future :)
+              Image Url: 
+               <input
+                 value={newPostData.imgUrl}
+                 onChange={(e) => setNewPostData({...newPostData, imgUrl: e.target.value})} />
+            </label> */}
             
            <div className="our-bts">
-             <button type="submit">Add Post</button>
+             <button type="submit" onClick={postAdded}>Add Post</button>
              <button type="submit" onClick={backToPosts}>Back To Posts</button>
            </div>
         </form>
     </div>
   )
 }
+
+

@@ -23,7 +23,7 @@
 }
 
 p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: monospace;
     font-size: 14pt;
     text-align: left;
 }
@@ -41,4 +41,39 @@ p {
 
 .newPost {
     margin: 20px;
+}
+
+/*profile component*/
+.profile-container {
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.profile-heading {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+
+/*my posts component*/
+.myPosts {
+    color: black;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+}
+
+.delete-btn {
+    margin: 10px;
+}
+
+.logOut {
+    margin-bottom: 20px;
 }
