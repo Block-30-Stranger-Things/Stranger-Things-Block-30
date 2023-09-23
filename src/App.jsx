@@ -20,7 +20,7 @@ function App() {
   return (
   <>
     <div className="link-container">
-      <button className="logOut" onClick={logOut}>Log Out</button>
+      <button className="logOutOnNav" onClick={logOut}>Log Out</button>
       <div className="navigation">
         <Link to="/">Home</Link>
         <Link to="/register">Register</Link>
