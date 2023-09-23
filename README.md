@@ -1,5 +1,7 @@
 # Block 30: Stranger Things
 
+Deployed Site: https://grand-churros-0999ce.netlify.app/
+
 - Requirements: 
 Make sure you have met all of the following requirements:
 
