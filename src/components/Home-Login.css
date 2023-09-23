@@ -52,6 +52,12 @@ h1 {
   font-family: "Courier New", Courier, monospace;
   color: white;
   font-size: 14pt;
+  margin-top: 10px;
+}
+
+.error-message {
+  font-family: monospace;
+  font-size: 16pt;
 }
 
 .login-btn:hover {

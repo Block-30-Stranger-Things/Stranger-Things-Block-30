@@ -7,6 +7,7 @@ import "./Home-Login.css";
 export default function Login({ setToken }) {
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   //useNavigate
   const navigate = useNavigate();
@@ -21,6 +22,12 @@ export default function Login({ setToken }) {
 
   const handelSubmit = async (e) => {
     e.preventDefault();
+
+    if (!userName || !password) {
+      setError("Please enter both username and password");
+    } else {
+      setError("")
+    }
 
     if (userName && password) {
       const result = await login(userName, password);
@@ -71,6 +78,8 @@ export default function Login({ setToken }) {
               className="input-login"
             />
           </label>
+
+          {error && <span className="error-message">{error}</span>}
 
           <button className="login-btn">Login</button>
         </form>
