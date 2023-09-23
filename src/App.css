@@ -9,6 +9,11 @@
   padding: 0
 }
 
+.logOut {
+  float: right;
+  margin-top: 20px;
+}
+
 /*navigation*/
 .link-container {
   background-color: #cf2e2e;

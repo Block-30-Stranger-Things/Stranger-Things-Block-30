@@ -5,15 +5,22 @@ import Profile from './components/Profile'
 import Posts from './components/Posts'
 import NewPost from './components/NewPost'
 import Register from './components/Register'
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 function App() {
   const [token, setToken] = useState(null);
 
+  const navigate = useNavigate();
+
+  function logOut() {
+    navigate("/login")
+  }
+
   return (
   <>
     <div className="link-container">
+      <button className="logOut" onClick={logOut}>Log Out</button>
       <div className="navigation">
         <Link to="/">Home</Link>
         <Link to="/register">Register</Link>
