@@ -71,8 +71,6 @@ function getDate() {
           </button>
         </div>
       )}
-    </>
-  );
 
      <div className="profile-container">
       <h2 className="profile-heading">My Profile</h2>
