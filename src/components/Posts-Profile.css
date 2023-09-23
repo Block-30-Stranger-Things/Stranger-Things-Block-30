@@ -1,79 +1,80 @@
 /*posts*/
 .posts-container {
-    background-color: white;
-    width: 100%;
-    max-width: 800px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 25px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+  background-color: white;
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.post-heading, p {
-    color: black;
-    padding: 20px;
-    font-size: 3em;
+.post-heading,
+p {
+  color: black;
+  padding: 20px;
+  font-size: 3em;
 }
 
 .title-heading {
-    font-family: monospace;
-    color: black;
+  font-family: monospace;
+  color: black;
 }
 
 p {
-    font-family: monospace;
-    font-size: 14pt;
-    text-align: left;
+  font-family: monospace;
+  font-size: 14pt;
+  text-align: left;
 }
 
 /*search and Search Bar Component*/
 .search {
-    text-align: center;
-    font-size: 16pt;
+  text-align: center;
+  font-size: 16pt;
 }
 
 .searchBar {
-    border-radius: 10px;
-    width: 300px;
+  border-radius: 10px;
+  width: 300px;
 }
 
 .newPost {
-    margin: 20px;
+  margin: 20px;
 }
 
 /*profile component*/
 .profile-container {
-    background-color: white;
-    width: 100%;
-    max-width: 900px;
-    border-radius: 12px;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-bottom: 40px;
+  background-color: white;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 40px;
 }
 
 .profile-heading {
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 20px;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  padding: 20px;
 }
 
 /*my posts component*/
 .myPosts {
-    color: black;
-    margin-top: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    margin-top: 20px;
+  color: black;
+  margin-top: 20px;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 20px;
 }
 
 .delete-btn {
-    margin: 10px;
+  margin: 10px;
 }
 
 .logOut {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }

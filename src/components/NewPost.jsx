@@ -32,7 +32,8 @@ function backToPosts() {
 
 //post added
 function postAdded() {
-  alert("Your post has been added. Please go to posts or profile")
+  alert("Awesome, your post has been added!");
+  navigate("/profile");
 }
 
   return (

@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { fetchAllPosts } from './API';
-import { useNavigate } from 'react-router-dom';
-import SearchBar from './SearchBar';
-import './Posts-Profile.css'
+import React, { useState, useEffect } from "react";
+import { fetchAllPosts } from "./API";
+import { useNavigate } from "react-router-dom";
+import SearchBar from "./SearchBar";
+import "./Posts-Profile.css";
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
-  useEffect(() => {  
+  useEffect(() => {
     const fetchPosts = async () => {
       const postsData = await fetchAllPosts();
       setPosts(postsData);
-    }
+    };
 
     fetchPosts();
   }, []);
@@ -20,7 +20,7 @@ export default function Posts() {
   const handleSearchInput = (query) => {
     setSearchQuery(query);
   };
-  
+
   const filteredPosts = posts.filter((post) =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -29,16 +29,28 @@ export default function Posts() {
   const navigate = useNavigate();
 
   function navigateToNewPost() {
-    navigate('../newPost')
+    navigate("../newPost");
+  }
+
+  //get todays date
+  function getDate() {
+    document.getElementById("getTodaysDate").innerHTML = Date();
   }
 
   return (
     <div className="posts-container">
       <h2 className="post-heading">Posts</h2>
       <p className="search">Search for Posts: </p>
-      <SearchBar value={searchQuery} onChange={handleSearchInput}/>
 
-      <button className="newPost" onClick={navigateToNewPost}>Add New Post</button>
+      <SearchBar value={searchQuery} onChange={handleSearchInput} />
+
+      <button onClick={getDate} className="date" id="getTodaysDate">
+        Todays Date
+      </button>
+
+      <button className="newPost" onClick={navigateToNewPost}>
+        Add New Post
+      </button>
 
       {filteredPosts.map((post) => (
         <div key={post._id}>
@@ -53,6 +65,5 @@ export default function Posts() {
         </div>
       ))}
     </div>
-  )
+  );
 }
-

@@ -1,98 +1,94 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 /*Home Component*/
 h1 {
-    font-size: 4em;
-    color: white;
-    font-family: monospace;
-  }
-  
+  font-size: 4em;
+  color: white;
+  font-family: monospace;
+}
+
 /* Login Component */
 .login-container {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 100%;
-   max-width: 550px;
-   background-color: black;
-   margin-top: 180px;
-   border-radius: 12px;
-   padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 550px;
+  background-color: black;
+  margin-top: 180px;
+  border-radius: 12px;
+  padding: 20px;
 }
 
 .login-heading {
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    font-size: 2em;
-    padding-bottom: 10px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  font-size: 2em;
+  padding-bottom: 10px;
 }
 
 .label-login {
-    font-size: 16pt;
-    color: white;
+  font-size: 16pt;
+  color: white;
 }
 
 .input-login {
-    font-size: 14pt;
-    margin: 20px;
-    padding: 10px;
-    width: 400px;
-    caret-color: #cf2e2e;
+  font-size: 14pt;
+  margin: 20px;
+  padding: 10px;
+  width: 400px;
+  caret-color: #cf2e2e;
 }
 
 .login-btn {
-    padding: 10px;
-    background-color: #cf2e2e;
-    border-radius: 12px;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    font-size: 14pt;
+  padding: 10px;
+  background-color: #cf2e2e;
+  border-radius: 12px;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  font-size: 14pt;
 }
 
 .login-btn:hover {
-    color: black;
-    cursor: pointer;
+  color: black;
+  cursor: pointer;
 }
 
 /*buttons*/
 .our-bts {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-    background-color: white;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
 }
 
 button {
-    background-color: #cf2e2e;
-    padding: 10px;
-    border-radius: 10px;
-    font-family: monospace;
-    font-size: 12.5pt;
+  background-color: #cf2e2e;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: 12.5pt;
+  margin-bottom: 10px;
 }
 
 button:hover {
-    color: black;
-    cursor: pointer;
+  color: black;
+  cursor: pointer;
 }
 
 /*image*/
 .strangeMainImage {
-    width: 100%;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border-radius: 30px;
-    margin-top: 15px;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 30px;
+  margin-top: 15px;
 }
-
-
-
-
-

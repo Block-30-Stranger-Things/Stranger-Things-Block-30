@@ -32,25 +32,12 @@ export default function Profile({ token, userName }) {
     alert("Logging out, see you next time !");
   }
 
-  //get todays date
-  function getDate() {
-    const dateElement = document.getElementById("getTodaysDate");
-    if (dateElement) {
-      dateElement.innerHTML = new Date().toString();
-    } else {
-      console.error("Element with id 'getTodaysDate' not found");
-    }
-  }
-
   return (
     <>
       {token ? (
         <div className="profile-container">
           <h2 className="profile-heading">My Profile</h2>
           <div className="profile-info">
-            <button onClick={getDate} className="date">
-              Todays Date
-            </button>
             <p>Welcome, {profile.username}!</p>
             <p>Messages: TBD Will Work On This {profile.messages}</p>
             <p>ID: {profile._id}</p>
