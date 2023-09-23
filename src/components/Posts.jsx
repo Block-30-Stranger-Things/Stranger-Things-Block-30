@@ -49,7 +49,6 @@ export default function Posts() {
           <p>Created At: {post.createdAt}</p>
           <p>Updated At: {post.updatedAt}</p>
           <p>Cohort: {post.cohort}</p>
-
           <hr />
         </div>
       ))}

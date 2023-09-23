@@ -1,42 +1,50 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import { login } from './API'
-// import { useNavigate } from 'react-router-dom'
-import './Home-Login.css'
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { login } from "./API";
+import { useNavigate } from "react-router-dom";
+import "./Home-Login.css";
 
-export default function Login({setToken}) {
-const [userName, setUsername] = useState("");
-const [password, setPassword] = useState("");
+export default function Login({ setToken }) {
+  const [userName, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-const inputtingUsername = (e) => {
+  //useNavigate
+  const navigate = useNavigate();
+
+  const inputtingUsername = (e) => {
     setUsername(e.target.value);
-}
+  };
 
-const inputtingPassword = (e) => {
+  const inputtingPassword = (e) => {
     setPassword(e.target.value);
-}
+  };
 
-const handelSubmit = async (e) => {
+  const handelSubmit = async (e) => {
     e.preventDefault();
 
     if (userName && password) {
-          const result = await login(userName, password);
-  
-          if (result.success) {
-            console.log("Login is successful")
-            alert("You are now logged in and you can go to your profile page")
+      const result = await login(userName, password);
 
-            const token = result.data.token
-            localStorage.setItem("token", token)
-            console.log(localStorage)
-            setToken(token);
+      if (result.success) {
+        console.log("Login is successful");
+        alert(`You are now logged in ${userName}! Welcome To Stranger Things For Sale!`);
 
-          } else {
-            console.log("Login failed. Incorrect username or password. Please try again")
-            alert("Login is incorrect, please try again, or register if you don't have an account")
-          }
-        } 
+        const token = result.data.token;
+        localStorage.setItem("token", token);
+        console.log(localStorage);
+        setToken(token);
+
+        navigate("/profile");
+      } else {
+        console.log(
+          "Login failed. Incorrect username or password. Please try again"
+        );
+        alert(
+          "Login is incorrect, please try again, or register if you don't have an account"
+        );
       }
+    }
+  };
 
   return (
     <>
@@ -44,29 +52,29 @@ const handelSubmit = async (e) => {
         <h2 className="login-heading">Log In</h2>
         <form onSubmit={handelSubmit}>
           <label className="label-login">
-            Username: 
+            Username:
             <input
-             value={userName} 
-             placeholder="Username"
-             onChange={inputtingUsername}
-             className="input-login"/>
+              value={userName}
+              placeholder="Username"
+              onChange={inputtingUsername}
+              className="input-login"
+            />
           </label>
 
           <label className="label-login">
-           Password: 
-            <input 
-             value={password} 
-             type="password"
-             placeholder="Enter Password"
-             onChange={inputtingPassword}
-             className="input-login"/>
+            Password:
+            <input
+              value={password}
+              type="password"
+              placeholder="Enter Password"
+              onChange={inputtingPassword}
+              className="input-login"
+            />
           </label>
 
           <button className="login-btn">Login</button>
-      </form>
+        </form>
       </div>
     </>
-  )
+  );
 }
-
-

@@ -10,7 +10,7 @@ export default function NewPost() {
     title: "",
     description: "",
     price: "",
-    location: "",
+    location: ""
 })
 
 const handelSubmit = async (e) => {
@@ -68,7 +68,7 @@ function postAdded() {
                  onChange={(e) => setNewPostData({...newPostData, location: e.target.value})} />
             </label>
 
-            {/* <label>  // Unfortunately, I couldn't get this to work on time, but I really want to so I will work on this in the future :)
+            {/* <label>  //Going to Work on getting the image url to work
               Image Url: 
                <input
                  value={newPostData.imgUrl}
