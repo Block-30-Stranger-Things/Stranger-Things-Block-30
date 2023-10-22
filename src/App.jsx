@@ -1,5 +1,6 @@
 import "./App.css";
 import Home from "./components/Home";
+import About from "./components/About";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Posts from "./components/Posts";
@@ -34,10 +35,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile token={token} />} />
         <Route path="/register" element={<Register setToken={setToken} />} />
         <Route path="/login" element={<Login setToken={setToken} />} />
-        <Route path="/profile" element={<Profile token={token} />} />
-
         <Route path="/posts" element={<Posts />} />
         <Route path="/newPost" element={<NewPost />} />
       </Routes>
