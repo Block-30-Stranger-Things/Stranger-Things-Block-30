@@ -43,3 +43,16 @@
   width: 400px;
   caret-color: #cf2e2e;
 }
+
+.linkToLogin {
+  color: white;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 14pt;
+}
+
+.linkToLogin:hover {
+  color:#cf2e2e;
+  cursor: pointer;
+
+}
