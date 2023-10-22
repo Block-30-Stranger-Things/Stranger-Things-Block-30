@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchAllPosts } from "./API";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import "./Posts-Profile.css";
+import "./css/Posts-Profile.css";
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);

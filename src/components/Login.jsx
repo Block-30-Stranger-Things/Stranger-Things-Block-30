@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { login } from "./API";
 import { useNavigate } from "react-router-dom";
-import "./Home-Login.css";
+import "./css/Home-Login.css";
 
 export default function Login({ setToken }) {
   const [userName, setUsername] = useState("");
@@ -15,7 +15,6 @@ export default function Login({ setToken }) {
   function goToRegister() {
     navigate("/register");
   }
-
 
   const inputtingUsername = (e) => {
     setUsername(e.target.value);
@@ -31,7 +30,7 @@ export default function Login({ setToken }) {
     if (!userName || !password) {
       setError("Please enter both username and password");
     } else {
-      setError("")
+      setError("");
     }
 
     if (userName && password) {
@@ -39,7 +38,9 @@ export default function Login({ setToken }) {
 
       if (result.success) {
         console.log("Login is successful");
-        alert(`You are now logged in ${userName}! Welcome To Stranger Things For Sale!`);
+        alert(
+          `You are now logged in ${userName}! Welcome To Stranger Things For Sale!`
+        );
 
         const token = result.data.token;
         localStorage.setItem("token", token);
@@ -89,8 +90,10 @@ export default function Login({ setToken }) {
           <button className="login-btn">Login</button>
         </form>
 
-        <p className="noAccount">Don't have an Account?</p> 
-         <div className="linkToLogin" onClick={goToRegister}>Register</div>
+        <p className="noAccount">Don't have an Account?</p>
+        <div className="linkToLogin" onClick={goToRegister}>
+          Register
+        </div>
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { myData } from "./API";
 import MyPosts from "./MyPosts";
 import { useNavigate } from "react-router-dom";
+import "./css/Posts-Profile.css";
 
 export default function Profile({ token, userName }) {
   const [profile, setProfile] = useState({});
