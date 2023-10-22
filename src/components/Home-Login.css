@@ -65,6 +65,11 @@ h1 {
   cursor: pointer;
 }
 
+.noAccount {
+  color: white;
+  text-align: center;
+}
+
 /*buttons*/
 .our-bts {
   display: flex;

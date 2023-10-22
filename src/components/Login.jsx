@@ -12,6 +12,11 @@ export default function Login({ setToken }) {
   //useNavigate
   const navigate = useNavigate();
 
+  function goToRegister() {
+    navigate("/register");
+  }
+
+
   const inputtingUsername = (e) => {
     setUsername(e.target.value);
   };
@@ -83,6 +88,9 @@ export default function Login({ setToken }) {
 
           <button className="login-btn">Login</button>
         </form>
+
+        <p className="noAccount">Don't have an Account?</p> 
+         <div className="linkToLogin" onClick={goToRegister}>Register</div>
       </div>
     </>
   );
