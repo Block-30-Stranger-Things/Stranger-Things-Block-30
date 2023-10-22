@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { registerUser } from './API'
 
 export default function Register({ setToken }) {
 const [registerUsername, setRegisteredUsername] = useState("")
 const [registerPassword, setRegisterPassword] = useState("");
+
+//useNavigate
+const navigate = useNavigate();
+
+function goToLogin() {
+  navigate("/login");
+}
 
 function inputUserName(e) {
   setRegisteredUsername(e.target.value)
@@ -47,7 +54,7 @@ const handelSubmit = async (e) => {
 
           <button onClick={handelSubmit}>Register</button>
          <p style={{color: "white", marginTop: "10px"}}>Already Have An Account?</p> 
-         <div className="linkToLogin">Login</div>
+         <div className="linkToLogin" onClick={goToLogin}>Login</div>
         </form>
     </div>
 
