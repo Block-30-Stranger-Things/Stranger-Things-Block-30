@@ -21,15 +21,17 @@ function App() {
   return (
     <>
       <div className="link-container">
-        <button className="logOutOnNav" onClick={logOut}>
-          Log Out
-        </button>
         <div className="navigation">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/profile">Profile</Link>
           <Link to="/posts">Posts</Link>
           <Link to="/login">Login</Link>
+          <div className="logout-button">
+            <button className="logOutOnNav" onClick={logOut}>
+              Log Out
+            </button>
+          </div>
         </div>
       </div>
 
