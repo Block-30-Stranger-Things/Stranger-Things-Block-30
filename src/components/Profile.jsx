@@ -36,7 +36,7 @@ export default function Profile({ token, userName }) {
   return (
     <>
       {token ? (
-        <div className="profile-container">
+        <section className="profile-container">
           <h2 className="profile-heading">My Profile</h2>
           <div className="profile-info">
             <p>Welcome, {profile.username}!</p>
@@ -49,7 +49,7 @@ export default function Profile({ token, userName }) {
             <hr />
             <MyPosts posts={posts} />
           </div>
-        </div>
+        </section>
       ) : (
         <div className="profile-container">
           <p>Please log in to view your profile.</p>

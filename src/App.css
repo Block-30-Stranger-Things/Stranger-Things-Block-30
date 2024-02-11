@@ -40,6 +40,10 @@
   align-items: center;
 }
 
+.title {
+  margin-right: auto;
+}
+
 @media screen and (max-width: 375px) {
   .link-container {
     flex-direction: column;
@@ -52,7 +56,7 @@ li {
 
 .navigation {
   font-size: 18pt;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Tapestry", serif;
   width: 100%;
 }
 

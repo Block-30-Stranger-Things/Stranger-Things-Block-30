@@ -6,34 +6,23 @@ import Profile from "./components/Profile";
 import Posts from "./components/Posts";
 import NewPost from "./components/NewPost";
 import Register from "./components/Register";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
   const [token, setToken] = useState(null);
 
-  const navigate = useNavigate();
-
-  function logOut() {
-    navigate("/login");
-  }
-
   return (
     <>
-      <div className="link-container">
+      <section className="link-container">
         <div className="navigation">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/profile">Profile</Link>
           <Link to="/posts">Posts</Link>
           <Link to="/login">Login</Link>
-          <div className="logout-button">
-            <button className="logOutOnNav" onClick={logOut}>
-              Log Out
-            </button>
-          </div>
+          <div className="logout-button"></div>
         </div>
-      </div>
+      </section>
 
       <Routes>
         <Route path="/" element={<Home />} />

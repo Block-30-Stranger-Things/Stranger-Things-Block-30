@@ -38,7 +38,7 @@ export default function Posts() {
   }
 
   return (
-    <div className="posts-container">
+    <section className="posts-container">
       <h2 className="post-heading">Posts</h2>
       <p className="search">Search for Posts: </p>
 
@@ -64,6 +64,6 @@ export default function Posts() {
           <hr />
         </div>
       ))}
-    </div>
+    </section>
   );
 }

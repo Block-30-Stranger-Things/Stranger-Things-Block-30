@@ -41,13 +41,12 @@ export default function Login({ setToken }) {
         alert(
           `You are now logged in ${userName}! Welcome To Stranger Things For Sale!`
         );
+        navigate("/profile");
 
         const token = result.data.token;
         localStorage.setItem("token", token);
         console.log(localStorage);
         setToken(token);
-
-        navigate("/profile");
       } else {
         console.log(
           "Login failed. Incorrect username or password. Please try again"
@@ -61,7 +60,7 @@ export default function Login({ setToken }) {
 
   return (
     <>
-      <div className="login-container">
+      <section className="login-container">
         <h2 className="login-heading">Log In</h2>
         <form onSubmit={handelSubmit}>
           <label className="label-login">
@@ -94,7 +93,7 @@ export default function Login({ setToken }) {
         <div className="linkToLogin" onClick={goToRegister}>
           Register
         </div>
-      </div>
+      </section>
     </>
   );
 }

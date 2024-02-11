@@ -46,7 +46,7 @@ export default function MyPosts({ posts }) {
               Delete Post
             </button>
             <button type="button" onClick={() => selectPost(post._id)}>
-              Select Post
+              View Post
             </button>
           </div>
         </div>

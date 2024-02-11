@@ -21,10 +21,12 @@ p {
 .title-heading {
   font-family: monospace;
   color: black;
+  margin-top: 10px;
+  font-size: 16pt;
 }
 
 p {
-  font-family: monospace;
+  font-family: "Times New Roman", Times, serif;
   font-size: 14pt;
   text-align: left;
 }
